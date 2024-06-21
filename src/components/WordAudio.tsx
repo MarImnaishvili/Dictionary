@@ -39,10 +39,20 @@ const WordAudioWrapper = styled.div`
   align-items: center;
   margin-bottom: 1rem;
 
+  h1 {
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.1px;
+  }
+
   span {
     color: #bb76db;
     display: inline-block;
     padding-top: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    letter-spacing: 0.1px;
   }
 
   button {

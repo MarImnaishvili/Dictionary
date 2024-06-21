@@ -104,12 +104,11 @@ const StyledInput = styled.div`
 
   & > input {
     width: 100%;
-    height: 3rem;
-    padding: 0.5rem;
-    padding-left: 1rem;
+    height: 4rem;
+    padding-left: 1.5rem;
     font-size: 1.5rem;
     background-color: #eeeded;
-    border-radius: 0.8rem;
+    border-radius: 1.3rem;
     border: none;
     outline: none;
   }

@@ -49,8 +49,8 @@ const HeaderContainer = styled.header<nightmoodType>`
   margin-bottom: 5rem;
 
   .headerImg {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   #selectfont {
@@ -65,7 +65,7 @@ const HeaderContainer = styled.header<nightmoodType>`
 
   .line {
     width: 0.1rem;
-    height: 2rem;
+    height: 3rem;
     background-color: #ccc;
   }
   .adjustStyles {
@@ -77,8 +77,8 @@ const HeaderContainer = styled.header<nightmoodType>`
   .switch {
     position: relative;
     display: inline-block;
-    width: 2.5rem;
-    height: 1.2rem;
+    width: 3.5rem;
+    height: 1.9rem;
     margin: 0 0.5rem;
   }
   .slider {
@@ -90,7 +90,7 @@ const HeaderContainer = styled.header<nightmoodType>`
     bottom: 0;
     background-color: #797979;
     transition: all.4s;
-    border-radius: 3rem;
+    border-radius: 2.5rem;
   }
   .switch input {
     display: none;
@@ -98,10 +98,10 @@ const HeaderContainer = styled.header<nightmoodType>`
   .slider::before {
     position: absolute;
     content: "";
-    height: 1rem;
-    width: 1rem;
-    left: 0.1rem;
-    bottom: 0.1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    left: 0.3rem;
+    bottom: 0.2rem;
     border-radius: 50%;
     background-color: #fff;
     transition: 0.4s;
@@ -110,6 +110,6 @@ const HeaderContainer = styled.header<nightmoodType>`
     background-color: #bb76db;
   }
   input[type="checkbox"]:checked + .slider::before {
-    transform: translateX(1.3rem);
+    transform: translateX(1.4rem);
   }
 `;

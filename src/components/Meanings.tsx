@@ -35,17 +35,14 @@ const Meanings = ({ dictionaryData }: MeaningsType) => {
                   <li key={index}>
                     {definitions.definition}
                     {definitions.example && (
-                      <p className="example">
-                        {" "}
-                        Example: "{definitions.example}"
-                      </p>
+                      <p className="example">"{definitions.example}"</p>
                     )}
                   </li>
                 ))}
               </ul>
               {item.synonyms && item.synonyms.length !== 0 && (
                 <div>
-                  <span>Synonyms: </span>
+                  <span className="sunonymesHd">Synonyms: </span>
                   {item.synonyms.map((synonym, sIndex) => (
                     <span key={sIndex} className="synonyms">
                       {" "}
@@ -77,17 +74,14 @@ const Meanings = ({ dictionaryData }: MeaningsType) => {
                       <li key={dIndex}>
                         {definition.definition}
                         {definition.example && (
-                          <p className="example">
-                            {" "}
-                            Example: "{definition.example}"
-                          </p>
+                          <p className="example">"{definition.example}"</p>
                         )}
                       </li>
                     ))}
                   </ul>
                   {meaning.synonyms && meaning.synonyms.length !== 0 && (
                     <div>
-                      <span>Synonyms: </span>
+                      <span className="sunonymesHd">Synonyms: </span>
                       {meaning.synonyms.map((synonym, sIndex) => (
                         <span key={sIndex} className="synonyms">
                           {" "}
@@ -112,6 +106,10 @@ const Meanings = ({ dictionaryData }: MeaningsType) => {
 
 const MeaningWrapper = styled.div`
   width: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  letter-spacing: 0.1px;
 
   .partOfSpeech {
     display: flex;
@@ -120,6 +118,10 @@ const MeaningWrapper = styled.div`
     font-family: Cinzel Decorative;
     font-size: 1.5rem;
     margin: 0.7rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    letter-spacing: 0.1px;
   }
   .meaningLine {
     width: 85%;
@@ -129,6 +131,10 @@ const MeaningWrapper = styled.div`
   h4 {
     color: #aaa9a9;
     margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    letter-spacing: 0.1px;
   }
   ul {
     padding: 0 1rem;
@@ -139,12 +145,18 @@ const MeaningWrapper = styled.div`
   }
   .example {
     margin: 0.3rem 0;
+    color: #aaa9a9;
   }
   .synonyms {
     color: #bb76db;
   }
+  .sunonymesHd {
+    color: #aaa9a9;
+  }
   li {
-    line-height: 1.3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.6rem;
     letter-spacing: 0.1px;
   }
   .lastLine {

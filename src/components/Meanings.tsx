@@ -46,7 +46,8 @@ const Meanings = ({ dictionaryData }: MeaningsType) => {
                   {item.synonyms.map((synonym, sIndex) => (
                     <span key={sIndex} className="synonyms">
                       {" "}
-                      {synonym},
+                      {synonym}
+                      {sIndex === item.synonyms.length - 1 ? "." : ","}
                     </span>
                   ))}
                 </div>
@@ -85,7 +86,8 @@ const Meanings = ({ dictionaryData }: MeaningsType) => {
                       {meaning.synonyms.map((synonym, sIndex) => (
                         <span key={sIndex} className="synonyms">
                           {" "}
-                          {synonym},
+                          {synonym}
+                          {sIndex === meaning.synonyms.length - 1 ? "." : ","}
                         </span>
                       ))}
                     </div>
@@ -116,12 +118,8 @@ const MeaningWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     font-family: Cinzel Decorative;
-    font-size: 1.5rem;
     margin: 0.7rem 0;
     font-size: 2rem;
-    font-weight: 500;
-    line-height: 2.6rem;
-    letter-spacing: 0.1px;
   }
   .meaningLine {
     width: 85%;
@@ -131,10 +129,6 @@ const MeaningWrapper = styled.div`
   h4 {
     color: #aaa9a9;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 2.6rem;
-    letter-spacing: 0.1px;
   }
   ul {
     padding: 0 1rem;
@@ -153,12 +147,7 @@ const MeaningWrapper = styled.div`
   .sunonymesHd {
     color: #aaa9a9;
   }
-  li {
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 2.6rem;
-    letter-spacing: 0.1px;
-  }
+
   .lastLine {
     width: 100%;
     height: 0.1rem;

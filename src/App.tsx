@@ -27,6 +27,16 @@ function App() {
     fetchData();
   }, [searchQuery]);
 
+  useEffect(() => {
+    if (fontRef.current) {
+      fontRef.current.style.fontFamily = font;
+    }
+  }, [font]);
+
+  const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
+
   const audioUrl =
     dictionaryData?.[0]?.phonetics?.[0]?.audio ||
     dictionaryData?.[0]?.phonetics?.[1]?.audio ||
@@ -35,17 +45,7 @@ function App() {
 
   console.log(dictionaryData);
 
-  const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
-  };
-
   const fontRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (fontRef.current) {
-      fontRef.current.style.fontFamily = font;
-    }
-  }, [font]);
 
   const handleSearch = () => {
     if (searchQuery.trim() !== "") {
@@ -106,9 +106,9 @@ const StyledInput = styled.div`
     width: 100%;
     height: 4rem;
     padding-left: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     background-color: #eeeded;
-    border-radius: 1.3rem;
+    border-radius: 1.4rem;
     border: none;
     outline: none;
   }

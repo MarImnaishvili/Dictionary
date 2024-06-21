@@ -102,7 +102,7 @@ const Meanings = ({ dictionaryData }: MeaningsType) => {
           ))}
       </div>
       {dictionaryData && <div className="lastLine"></div>}
-      <span className="source">Source: </span>
+      {dictionaryData && <span className="source">Source: </span>}
       <a href={dictionaryData && dictionaryData[0]["sourceUrls"][0]}>
         {dictionaryData && dictionaryData[0]["sourceUrls"][0]}
       </a>

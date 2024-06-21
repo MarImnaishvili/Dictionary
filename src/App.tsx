@@ -5,7 +5,7 @@ import Meanings from "./components/Meanings";
 import HeaderSection from "./components/HeaderSection";
 
 function App() {
-  const [font, setFont] = useState<string>("Cinzel Decorative");
+  const [font, setFont] = useState<string>("PT Serif");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [dictionaryData, setDictionaryData] = useState<string | number | any>();
   const [nightMood, setNightMood] = useState<boolean>(false);
@@ -27,6 +27,8 @@ function App() {
     fetchData();
   }, [searchQuery]);
 
+  const fontRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (fontRef.current) {
       fontRef.current.style.fontFamily = font;
@@ -44,8 +46,6 @@ function App() {
     dictionaryData?.[0]?.phonetics?.[3]?.audio;
 
   console.log(dictionaryData);
-
-  const fontRef = useRef<HTMLDivElement>(null);
 
   const handleSearch = () => {
     if (searchQuery.trim() !== "") {

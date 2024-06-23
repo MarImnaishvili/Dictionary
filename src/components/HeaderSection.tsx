@@ -27,7 +27,6 @@ export default function HeaderSection({
         <select id="selectfont" value={font} onChange={handleChangeFont}>
           <option value="PT Serif">PT Serif</option>
           <option value="Cinzel Decorative">Cinzel Decorative</option>
-          <option value="Work Sans">Work Sans</option>
           <option value="Roboto Serif">Roboto Serif</option>
         </select>
         <div className="line"></div>

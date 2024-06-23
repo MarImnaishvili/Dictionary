@@ -67,10 +67,12 @@ function App() {
           <img src="/search.svg"></img>
         </button>
       </StyledInput>
-      <MainContent>
-        <WordAudio audioUrl={audioUrl} dictionaryData={dictionaryData} />
-        <Meanings dictionaryData={dictionaryData} />
-      </MainContent>
+      {searchQuery.length > 0 ? (
+        <MainContent>
+          <WordAudio audioUrl={audioUrl} dictionaryData={dictionaryData} />
+          <Meanings dictionaryData={dictionaryData} />
+        </MainContent>
+      ) : null}
     </Container>
   );
 }
